@@ -2,7 +2,7 @@
 
 The [JUAS](https://www.esi-archamps.eu/juas-presentation/) features an [accelerator design workshop](https://esi-archamps.eu/juas-courses/#1636455686368-8e28251f-fd39). This repository provides the lattice design jupyter notebook, which contains the setup and exercises to design a particle collider using the [xsuite](https://xsuite.readthedocs.io/en/latest/) simulation framework.
 
-This repository provides an `xsuite` configuration for running jupyter notebooks, locally inside a docker container or on [mybinder.org](https://mybinder.org/).
+This repository provides an `xsuite` configuration for running jupyter notebooks, locally inside a [docker](https://docker.com/) container or on [mybinder.org](https://mybinder.org/).
 
 Launch an interactive binder instance here:
 
@@ -15,7 +15,19 @@ The published docker image is found here:
 ## Running the container
 The docker container can be run on the command line via
 
+### linux / macOS
+
     JUPYTER_TOKEN=madx docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v $HOME:/home/jovyan/home/ aoeftiger/juas26-accdesign
+
+### Windows
+
+using `cmd.exe`:
+
+    set JUPYTER_TOKEN=madx && docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
+
+or using PowerShell:
+
+    $env:JUPYTER_TOKEN='madx'; docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 where
 
