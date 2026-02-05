@@ -23,11 +23,11 @@ The docker container can be run on the command line via
 
 using `cmd.exe`:
 
-    set JUPYTER_TOKEN=madx && docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    set JUPYTER_TOKEN=madx && docker run -p 8880:8888 -e JUPYTER_TOKEN -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 or using PowerShell:
 
-    $env:JUPYTER_TOKEN='madx'; docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    $env:JUPYTER_TOKEN='madx'; docker run -p 8880:8888 -e JUPYTER_TOKEN -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 where
 
