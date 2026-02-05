@@ -13,7 +13,7 @@ The published docker image is found here:
 [![Docker](https://shields.io/docker/image-size/aoeftiger/juas26-accdesign?logo=docker)](https://hub.docker.com/r/aoeftiger/juas26-accdesign)
 
 ## Running the container
-The docker container can be run on the command line via
+Having installed the docker app from their website ([docker.com](https://docker.com/)), the docker container can be run on the command line via
 
 ### linux / macOS
 
@@ -23,11 +23,11 @@ The docker container can be run on the command line via
 
 using `cmd.exe`:
 
-    set JUPYTER_TOKEN=js && docker run -p 8880:8888 -e JUPYTER_TOKEN -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    set JUPYTER_TOKEN=jc && docker run -p 8880:8888 -e JUPYTER_TOKEN -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 or using PowerShell:
 
-    $env:JUPYTER_TOKEN='js'; docker run -p 8880:8888 -e JUPYTER_TOKEN -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    $env:JUPYTER_TOKEN='jc'; docker run -p 8880:8888 -e JUPYTER_TOKEN -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 where
 
