@@ -17,25 +17,25 @@ The docker container can be run on the command line via
 
 ### linux / macOS
 
-    JUPYTER_TOKEN=madx docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v $HOME:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    JUPYTER_TOKEN=jc docker run -p 8880:8888 -e JUPYTER_TOKEN -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v $HOME:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 ### Windows
 
 using `cmd.exe`:
 
-    set JUPYTER_TOKEN=madx && docker run -p 8880:8888 -e JUPYTER_TOKEN -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    set JUPYTER_TOKEN=js && docker run -p 8880:8888 -e JUPYTER_TOKEN -v %USERPROFILE%:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 or using PowerShell:
 
-    $env:JUPYTER_TOKEN='madx'; docker run -p 8880:8888 -e JUPYTER_TOKEN -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
+    $env:JUPYTER_TOKEN='js'; docker run -p 8880:8888 -e JUPYTER_TOKEN -v ${env:USERPROFILE}:/home/jovyan/home/ aoeftiger/juas26-accdesign
 
 where
 
- - `JUPYTER_TOKEN=madx` sets the token (password) for entering the jupyter server
+ - `JUPYTER_TOKEN=jc` sets the token (password) for entering the jupyter server
  - `-p 8880:8888` forwards the jupyter server port from inside the container to your outside system (change the first port `8880` to your liking)
  - `-v $HOME:/home/jovyan/home` binds your home directory to inside the docker container such that you can save and load notebooks.
 
-Next you can open your browser and load the page [https://localhost:8880/?token=madx](https://localhost:8880/?token=madx) to connect to the running jupyter lab server.
+Next you can open your browser and load the page [https://localhost:8880/?token=jc](https://localhost:8880/?token=jc) to connect to the running jupyter lab server.
 
 ## Building locally
 The docker container for this repository can be built locally by running on the command line
